@@ -2,7 +2,7 @@
   "name": "@signupnotes/signupnotes-vue",
   "private": false,
   "description": "A signupnotes form wrapper for Vue",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "type": "module",
   "main": "dist/index.umd.js",
   "module": "dist/index.es.js",
@@ -36,5 +36,18 @@
     "typescript": "^5.2.2",
     "vite": "^5.3.4",
     "vue-tsc": "^2.0.24"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/signupnotes/signupnotes-vue.git"
+  },
+  "keywords": [
+    "signupnotes"
+  ],
+  "author": "kovan studio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/signupnotes/signupnotes-vue/issues"
+  },
+  "homepage": "https://github.com/signupnotes/signupnotes-vue#readme"
 }
