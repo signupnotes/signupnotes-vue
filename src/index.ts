@@ -1,1 +1,2 @@
-export { default as SignupNotesForm } from './components/Form.vue';
+import SignupNotesForm from './components/Form.vue';
+export { SignupNotesForm };

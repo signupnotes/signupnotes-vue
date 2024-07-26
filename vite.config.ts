@@ -20,5 +20,11 @@ export default defineConfig({
       },
     },
   },
-  plugins: [vue(), dts()],
+  plugins: [
+    vue(),
+    dts({
+      tsconfigPath: path.resolve(__dirname, 'tsconfig.app.json'),
+      rollupTypes: true,
+    }),
+  ],
 });
