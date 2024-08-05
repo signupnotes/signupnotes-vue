@@ -49,7 +49,7 @@ const handleCompleted = (event: CustomEvent<Record<string, any>>) => {
     @step-change="handleStepChange"
     @loading="handleLoading"
     @loaded="handleLoaded"
-    :values="props.values"
+    :form-values="JSON.stringify(props.values || {})"
   />
 </template>
 
