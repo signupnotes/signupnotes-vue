@@ -1,5 +1,42 @@
-# Vue 3 + TypeScript + Vite
+#  SignupNotes Vue Component
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+The `signupnotes/vue` package provides a Vue.js component to easily integrate SignupNotes forms into your Vue application.
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+
+## Installation
+
+    npm install signupnotes/vue
+    yarn add signupnotes/vue
+
+## Usage
+
+    import { SignupNotesForm } from '@signupnotes/signupnotes-vue'
+	
+    <SignupNotesForm
+		class="h-full w-full"
+		:values="{
+			name:'John'
+		}"
+		:meta-data="{
+			source:'web'
+		}"
+		form-id="yourFormId"
+		return-url="https://your-return-url.com"
+		@submit-data="handleSubmit"
+		@step-change="handleStepChange"
+		@loading="handleLoading"
+		@loaded="handleLoaded"
+	/>
+
+## Props
+
+-   **formId** (required): The unique ID of the form.
+-   **returnUrl** (optional): The URL to redirect to after form submission.
+-   **values** (optional): Pre-fill form values as a record.
+-   **meta-data** (optional): Additional metadata to send with the form.
+
+## Events
+-   **@submit-data**: Triggered when the form is successfully submitted. Returns form data.
+-   **@step-change**: Triggered when the form step changes. Returns the current step number.
+-   **@loading**: Triggered when the form starts loading. Returns a boolean indicating the loading state.
+-   **@loaded**: Triggered when the form finishes loading. Returns a boolean indicating the loaded state.
