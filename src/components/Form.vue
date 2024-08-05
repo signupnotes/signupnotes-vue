@@ -15,6 +15,7 @@ const props = defineProps<{
   onStepChange?: (step: number) => void;
   onLoading?: (loading: boolean) => void;
   onLoaded?: (loaded: boolean) => void;
+  values?: Record<string, any>;
 }>();
 
 const handleLoaded = (event: CustomEvent<boolean>) => {
@@ -48,6 +49,7 @@ const handleCompleted = (event: CustomEvent<Record<string, any>>) => {
     @step-change="handleStepChange"
     @loading="handleLoading"
     @loaded="handleLoaded"
+    :values="props.values"
   />
 </template>
 
