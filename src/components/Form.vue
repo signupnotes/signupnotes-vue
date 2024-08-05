@@ -16,6 +16,7 @@ const props = defineProps<{
   onLoading?: (loading: boolean) => void;
   onLoaded?: (loaded: boolean) => void;
   values?: Record<string, any>;
+  metaData?: Record<string, any>;
 }>();
 
 const handleLoaded = (event: CustomEvent<boolean>) => {
@@ -50,6 +51,7 @@ const handleCompleted = (event: CustomEvent<Record<string, any>>) => {
     @loading="handleLoading"
     @loaded="handleLoaded"
     :form-values="JSON.stringify(props.values || {})"
+    :meta-data="JSON.stringify(props.metaData || {})"
   />
 </template>
 
