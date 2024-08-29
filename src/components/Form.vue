@@ -42,7 +42,7 @@ const handleCompleted = (event: CustomEvent<Record<string, any>>) => {
 </script>
 
 <template>
-  <form-element
+  <signup-notes
     style="width: 100%; min-height: 100%"
     :form-id="formId"
     :return-url="props.returnUrl"
