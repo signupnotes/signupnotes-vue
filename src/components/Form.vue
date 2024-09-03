@@ -4,7 +4,9 @@ import { onMounted } from 'vue';
 onMounted(() => {
   console.log(`the component is now mounted.`);
   const formScript = document.createElement('script');
-  formScript.src = 'https://dev.signupnotes-sdk.pages.dev/form.js';
+  //if script is loaded dont load again
+  if (document.getElementById('signup-notes-form')) return;
+  formScript.src = 'https://sdk.signupnotes.com/form.js';
   document.head.appendChild(formScript);
 });
 
