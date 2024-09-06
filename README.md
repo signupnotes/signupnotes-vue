@@ -21,7 +21,6 @@ The `signupnotes/vue` package provides a Vue.js component to easily integrate Si
 			source:'web'
 		}"
 		form-id="yourFormId"
-		return-url="https://your-return-url.com"
 		@submit-data="handleSubmit"
 		@step-change="handleStepChange"
 		@loading="handleLoading"
@@ -31,7 +30,6 @@ The `signupnotes/vue` package provides a Vue.js component to easily integrate Si
 ## Props
 
 -   **formId** (required): The unique ID of the form.
--   **returnUrl** (optional): The URL to redirect to after form submission.
 -   **values** (optional): Pre-fill form values as a record.
 -   **meta-data** (optional): Additional metadata to send with the form.
 

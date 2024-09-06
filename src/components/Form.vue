@@ -10,7 +10,6 @@ onMounted(() => {
 
 const props = defineProps<{
   formId: string;
-  returnUrl?: string;
   onCompleted?: (data: Record<string, any>) => void;
   onStepChange?: (step: number) => void;
   onLoading?: (loading: boolean) => void;
@@ -45,7 +44,6 @@ const handleCompleted = (event: CustomEvent<Record<string, any>>) => {
   <signup-notes
     style="width: 100%; min-height: 100%"
     :form-id="formId"
-    :return-url="props.returnUrl"
     @submit-data="handleCompleted"
     @step-change="handleStepChange"
     @loading="handleLoading"
